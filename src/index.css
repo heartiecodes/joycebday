@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 65% 12%;
+    --foreground: 35 43% 93%;
+
+    --card: 224 45% 18%;
+    --card-foreground: 35 43% 93%;
+
+    --popover: 224 65% 14%;
+    --popover-foreground: 35 43% 93%;
+
+    --primary: 39 62% 65%;
+    --primary-foreground: 224 65% 10%;
+
+    --secondary: 220 35% 25%;
+    --secondary-foreground: 35 43% 93%;
+
+    --muted: 220 30% 22%;
+    --muted-foreground: 35 20% 72%;
+
+    --accent: 39 62% 65%;
+    --accent-foreground: 224 65% 10%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 30% 28%;
+    --input: 220 30% 28%;
+    --ring: 39 62% 65%;
+
+    --radius: 0.75rem;
+
+    --sapphire: 220 35% 37%;
+    --royal-blue: 224 65% 12%;
+    --quicksand: 39 62% 65%;
+    --swan-wing: 35 43% 93%;
+    --shellstone: 17 24% 87%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Jost', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.04em;
+  }
+
+  ::selection {
+    background: hsl(39 62% 65% / 0.3);
+    color: hsl(35 43% 93%);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.04em;
+  }
+
+  .font-elegant {
+    font-family: 'Cormorant', serif;
+  }
+
+  .font-body {
+    font-family: 'Jost', sans-serif;
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(39 50% 55%) 0%,
+      hsl(39 80% 75%) 40%,
+      hsl(42 90% 80%) 50%,
+      hsl(39 80% 75%) 60%,
+      hsl(39 50% 55%) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-royal-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(224 65% 14%) 0%,
+      hsl(224 65% 10%) 50%,
+      hsl(224 65% 8%) 100%
+    );
+  }
+
+  .bg-section-alt {
+    background: linear-gradient(
+      180deg,
+      hsl(224 65% 10%) 0%,
+      hsl(224 55% 14%) 50%,
+      hsl(224 65% 10%) 100%
+    );
+  }
+
+  .gold-border {
+    border: 1px solid hsl(39 62% 65% / 0.25);
+  }
+
+  .gold-glow {
+    box-shadow:
+      0 0 20px hsl(39 62% 65% / 0.12),
+      0 0 60px hsl(39 62% 65% / 0.06);
+  }
+
+  .gold-glow-strong {
+    box-shadow:
+      0 0 30px hsl(39 62% 65% / 0.2),
+      0 0 80px hsl(39 62% 65% / 0.1),
+      inset 0 1px 0 hsl(39 62% 75% / 0.15);
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      110deg,
+      transparent 30%,
+      hsl(39 62% 65% / 0.08) 50%,
+      transparent 70%
+    );
+    background-size: 300% 100%;
+    animation: shimmer 4s ease-in-out infinite;
+  }
+
+  .glass-card {
+    background: hsl(224 45% 16% / 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(39 62% 65% / 0.1);
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes candleFlicker {
+    0%, 100% { transform: scaleY(1) scaleX(1); opacity: 1; }
+    25% { transform: scaleY(1.1) scaleX(0.9); opacity: 0.9; }
+    50% { transform: scaleY(0.95) scaleX(1.05); opacity: 1; }
+    75% { transform: scaleY(1.05) scaleX(0.95); opacity: 0.85; }
+  }
+
+  @keyframes gentle-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+}
