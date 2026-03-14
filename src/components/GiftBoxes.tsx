@@ -13,10 +13,10 @@ interface GiftBox {
 }
 
 const GIFT_BOXES: GiftBox[] = [
-  { id: 1, label: "Gift One", subtitle: "from Colleagues", youtubeUrl: "https://youtu.be/pflvQNvX1J8?si=mXNqVSOqAX2FL9E_", accent: "39 62% 65%", icon: Gift },
-  { id: 2, label: "Gift Two", subtitle: "from Girlfriends", youtubeUrl: "https://youtu.be/F7mKD2Un65I?si=esp97_D0kUrTaf07", accent: "220 40% 55%", icon: Heart },
-  { id: 3, label: "Gift Three", subtitle: "from Friends", youtubeUrl: "https://youtu.be/F7mKD2Un65I?si=esp97_D0kUrTaf07", accent: "224 55% 35%", icon: Sparkles },
-  { id: 4, label: "Gift Four", subtitle: "from Family", youtubeUrl: "https://youtu.be/F7mKD2Un65I?si=esp97_D0kUrTaf07", accent: "17 30% 70%", icon: Star },
+  { id: 1, label: "Gift One", subtitle: "from Colleagues", youtubeUrl: "https://youtu.be/eZCzI7zRaK4", accent: "39 62% 65%", icon: Gift },
+  { id: 2, label: "Gift Two", subtitle: "from Girlfriends", youtubeUrl: "https://youtu.be/F6GSM2FZ8l0", accent: "220 40% 55%", icon: Heart },
+  { id: 3, label: "Gift Three", subtitle: "from Friends", youtubeUrl: "https://youtu.be/JgSDyQKdXnA", accent: "224 55% 35%", icon: Sparkles },
+  { id: 4, label: "Gift Four", subtitle: "from Family", youtubeUrl: "https://youtu.be/kBgY4Mask2Q", accent: "17 30% 70%", icon: Star },
 ];
 
 const GiftBoxes = () => {
